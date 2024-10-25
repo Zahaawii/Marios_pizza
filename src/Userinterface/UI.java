@@ -1,5 +1,6 @@
 package Userinterface;
 import PizzaSystem.BuildAPizza;
+import PizzaSystem.PizzaMenu;
 import Statistics.StatisticInterface;
 
 import java.util.Objects;
@@ -65,6 +66,7 @@ public class UI {
         if(userChoice == 4) {
             ConsoleOperators.pressAnythingToContinue();
             System.out.println("You want to see the menu");
+            PizzaMenu.showMenu();
         }
     }
 
