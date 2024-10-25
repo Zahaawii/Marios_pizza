@@ -1,4 +1,7 @@
 package Userinterface;
+import PizzaSystem.BuildAPizza;
+import Statistics.StatisticInterface;
+
 import java.util.Objects;
 import java.util.Scanner;
 
@@ -48,12 +51,15 @@ public class UI {
         if(userChoice == 2) {
             ConsoleOperators.pressAnythingToContinue();
             System.out.println("You want to build your own pizza");
+            BuildAPizza.buildYourPizza();
 
         }
 
         if(userChoice == 3) {
             ConsoleOperators.pressAnythingToContinue();
             System.out.println("You want too see statistics");
+            StatisticInterface.addStatistic();
+            StatisticInterface.viewAllStatistics();
         }
     }
 
