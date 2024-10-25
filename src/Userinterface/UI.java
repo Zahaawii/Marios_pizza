@@ -40,7 +40,7 @@ public class UI {
                 System.out.println("Wrong input, press 1-3");
                 userChoice = 0;
             }
-        } while (userChoice < 1 || userChoice > 3);
+        } while (userChoice < 1 || userChoice > 4);
 
         if(userChoice == 1) {
             ConsoleOperators.pressAnythingToContinue();
@@ -60,6 +60,11 @@ public class UI {
             System.out.println("You want too see statistics");
             StatisticInterface.addStatistic();
             StatisticInterface.viewAllStatistics();
+        }
+
+        if(userChoice == 4) {
+            ConsoleOperators.pressAnythingToContinue();
+            System.out.println("You want to see the menu");
         }
     }
 
