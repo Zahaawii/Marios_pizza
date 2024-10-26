@@ -19,7 +19,6 @@ public class UI {
             endSession = scanner.next();
         } while (!endSession.equalsIgnoreCase("Y"));
 
-
     }
 
     private static void welcomeMenu() {
@@ -32,7 +31,7 @@ public class UI {
        int userChoice;
 
         do {
-            System.out.println("1. Place an order \n2. Build your own pizza \n3. See statistics.");
+            System.out.println("1. Place an order \n2. Build your own pizza \n3. See statistics. \n4. See the menu");
 
             try {
                 userChoice = Integer.parseInt(scanner.next());
@@ -66,14 +65,13 @@ public class UI {
         if(userChoice == 4) {
             ConsoleOperators.pressAnythingToContinue();
             System.out.println("You want to see the menu");
-            PizzaMenu.showMenu();
+            PizzaMenu.showMenuUI();
         }
     }
 
     private static void endSession() {
-        ConsoleOperators.printSeperator(30);
         System.out.println("Do you want to end the session");
-        System.out.println("Press Y to contiune or press anything else to end");
+        System.out.println("Press Y to end or press anything else to continue");
         ConsoleOperators.printSeperator(30);
     }
 }

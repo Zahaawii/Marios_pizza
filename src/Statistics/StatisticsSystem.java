@@ -13,7 +13,6 @@ public class StatisticsSystem {
     Statistic statistic = new Statistic(nextId++, pizzaName, dateAndTime);
     statistics.add(statistic);
     return statistic;
-
     }
 
     public List<Statistic> getStatistics() {

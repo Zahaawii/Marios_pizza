@@ -23,7 +23,5 @@ public class BuildAPizza {
         for(String pizza : newPizza) {
             System.out.println("The ingredients: " + pizza);
         }
-
-
     }
 }
