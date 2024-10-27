@@ -5,15 +5,19 @@ import java.util.Scanner;
 import java.util.ArrayList;
 import static Statistics.StatisticInterface.addOrderToStatistics;
 
+
+//Class created to give the user the opportunity to order a pizza
 public class OrderAPizza extends PizzaMenu {
 
     static Scanner scanner = new Scanner(System.in);
     static ArrayList<String> newPizza = new ArrayList<>();
 
+    //Method created to give the user the opportunity to choose a pizaz from the menu or to build a pizza
     public static void pizzaOrders() {
         int userChoice;
         System.out.println("Do you want to choose a pizza from the menu or choose your own?");
 
+        //Do, try, catch & while loop made so the user cannot crash the system and has to enter correct information
         do {
             System.out.println("Press 1 for menu " +
                     "\nPress 2 for build a pizza");
@@ -38,6 +42,7 @@ public class OrderAPizza extends PizzaMenu {
         }
     }
 
+    //Method created to give the user the chance to create a pizza that is not on the menu
     private static void buildYourPizza() {
         System.out.println("Enter the ingredients you want in your pizza " +
                 "\nYou can add up to 4");
@@ -56,6 +61,7 @@ public class OrderAPizza extends PizzaMenu {
         }
     }
 
+    //Method created to take the user input and output the pizza that the user want and then add it to the statistics
     protected static String buyAPizza() {
         menu();
 
@@ -79,6 +85,7 @@ public class OrderAPizza extends PizzaMenu {
                 (userPizzaChoice,null);
     }
 
+    //Method created to give the user the opportunity to remove a pizaz when the order is done
     public static void removePizzaFromScreen(int id) {
         System.out.println("Do you want to remove the order from the screen? " +
                 "\nPress 'Y' to remove or press anything else");
@@ -88,7 +95,7 @@ public class OrderAPizza extends PizzaMenu {
             ConsoleOperators.pressAnythingToContinue();
             System.out.println("You want to remove a pizza. Press the ID on the pizza to remove");
             id = scanner.nextInt();
-            StatisticsSystem.deleteCharacter(id);
+            StatisticsSystem.deleteOrder(id);
             System.out.println("ID: " + id + " has been removed");
         }
     }
