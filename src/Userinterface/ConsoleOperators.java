@@ -1,5 +1,4 @@
 package Userinterface;
-
 import java.util.Scanner;
 
 public class ConsoleOperators {

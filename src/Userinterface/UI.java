@@ -2,9 +2,6 @@ package Userinterface;
 import PizzaSystem.OrderAPizza;
 import PizzaSystem.PizzaMenu;
 import Statistics.StatisticInterface;
-import Statistics.StatisticsSystem;
-
-import java.util.Objects;
 import java.util.Scanner;
 
 public class UI {

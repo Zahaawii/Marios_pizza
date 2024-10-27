@@ -1,11 +1,8 @@
 package PizzaSystem;
 import Statistics.StatisticsSystem;
 import Userinterface.ConsoleOperators;
-
-import java.util.InputMismatchException;
 import java.util.Scanner;
 import java.util.ArrayList;
-
 import static Statistics.StatisticInterface.addOrderToStatistics;
 
 public class OrderAPizza extends PizzaMenu {

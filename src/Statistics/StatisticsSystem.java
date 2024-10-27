@@ -1,7 +1,6 @@
 package Statistics;
 import java.time.LocalDateTime;
 import java.util.List;
-import java.util.Scanner;
 import java.util.ArrayList;
 
 public class StatisticsSystem {
