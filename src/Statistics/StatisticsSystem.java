@@ -6,17 +6,36 @@ import java.util.ArrayList;
 
 public class StatisticsSystem {
 
-    private List <Statistic> statistics = new ArrayList<>();
+    private static List <Order> statistics = new ArrayList<>();
     private int nextId = 1;
 
-    public Statistic makeStatistics(String pizzaName, LocalDateTime dateAndTime) {
-    Statistic statistic = new Statistic(nextId++, pizzaName, dateAndTime);
+    public Order makeStatistics(String pizzaName, LocalDateTime dateAndTime) {
+    Order statistic = new Order(nextId++, pizzaName, dateAndTime);
     statistics.add(statistic);
     return statistic;
     }
 
-    public List<Statistic> getStatistics() {
+    public List<Order> getStatistics() {
         return statistics;
     }
+
+    public static Order getOrderStatistics(int id) {
+        for(Order Order : statistics){
+            if(Order.getId() == id ) {
+                return Order;
+            }
+        }
+        return null;
+    }
+
+    public static boolean deleteCharacter(int id) {
+        Order order = getOrderStatistics(id);
+        if(order != null) {
+            statistics.remove(order);
+            return true;
+        }
+        return false;
+    }
+
 
 }

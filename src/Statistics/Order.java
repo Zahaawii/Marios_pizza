@@ -2,13 +2,13 @@ package Statistics;
 
 import java.time.LocalDateTime;
 
-public class Statistic {
+public class Order {
 
     private int id;
     private String pizzaName;
     private LocalDateTime dateAndTime;
 
-    public Statistic (int id, String pizzaName, LocalDateTime dateAndTime) {
+    public Order (int id, String pizzaName, LocalDateTime dateAndTime) {
         this.id = id;
         this.pizzaName = pizzaName;
         this.dateAndTime = dateAndTime;

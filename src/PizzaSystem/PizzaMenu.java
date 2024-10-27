@@ -1,6 +1,6 @@
 package PizzaSystem;
 import Userinterface.ConsoleOperators;
-import static PizzaSystem.BuildAPizza.scanner;
+import static PizzaSystem.OrderAPizza.scanner;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -14,7 +14,7 @@ public class PizzaMenu {
        userMenuDecision();
     }
 
-    private static HashMap menu() {
+    protected static HashMap menu() {
 
         pizzaer.put(1, "Salat pizza: Salat, Tomatoes, Cucumbers, Onions, Kebab - 100,-");
         pizzaer.put(2, "Margaritha pizza: Cheese, tomatoes - 75,- ");
@@ -47,7 +47,7 @@ public class PizzaMenu {
 
     }
 
-    private static void seeAllPizza(){
+    protected static void seeAllPizza(){
         menu();
 
         System.out.println("Menu:");

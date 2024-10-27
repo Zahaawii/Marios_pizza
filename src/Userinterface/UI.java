@@ -1,7 +1,8 @@
 package Userinterface;
-import PizzaSystem.BuildAPizza;
+import PizzaSystem.OrderAPizza;
 import PizzaSystem.PizzaMenu;
 import Statistics.StatisticInterface;
+import Statistics.StatisticsSystem;
 
 import java.util.Objects;
 import java.util.Scanner;
@@ -31,7 +32,7 @@ public class UI {
        int userChoice;
 
         do {
-            System.out.println("1. Place an order \n2. Build your own pizza \n3. See statistics. \n4. See the menu");
+            System.out.println("1. Place an order. \n2. See statistics. \n3. See the menu \n4. Admin settings");
 
             try {
                 userChoice = Integer.parseInt(scanner.next());
@@ -44,28 +45,25 @@ public class UI {
 
         if(userChoice == 1) {
             ConsoleOperators.pressAnythingToContinue();
-            System.out.println("You want to place an order");
+            OrderAPizza.pizzaOrders();
 
         }
 
         if(userChoice == 2) {
             ConsoleOperators.pressAnythingToContinue();
-            System.out.println("You want to build your own pizza");
-            BuildAPizza.buildYourPizza();
-
+            System.out.println("You want too see statistics");
+            StatisticInterface.viewAllStatistics();
         }
 
         if(userChoice == 3) {
             ConsoleOperators.pressAnythingToContinue();
-            System.out.println("You want too see statistics");
-            StatisticInterface.addStatistic();
-            StatisticInterface.viewAllStatistics();
+            System.out.println("You want to see the menu");
+            PizzaMenu.showMenuUI();
         }
 
         if(userChoice == 4) {
-            ConsoleOperators.pressAnythingToContinue();
-            System.out.println("You want to see the menu");
-            PizzaMenu.showMenuUI();
+            System.out.println("You are now admin. What do you want to do?");
+            OrderAPizza.removePizzaFromScreen(1);
         }
     }
 
