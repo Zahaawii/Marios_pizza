@@ -34,7 +34,7 @@ public class UI {
 
        int userChoice;
 
-       //Do, try, catch & while loop made so the user cannot crash the system and has to enter correct information
+       //Error handling so the user cannot crash the system and has to enter correct information
         do {
             System.out.println("1. Place an order. \n2. See statistics. \n3. See the menu \n4. Remove settings");
 
