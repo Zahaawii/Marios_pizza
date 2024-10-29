@@ -7,7 +7,7 @@ public class ConsoleOperators {
 
     static Scanner scanner = new Scanner(System.in);
 
-    //Method makes a pretty display info
+    //Method makes a display info
     public static void displayInfo(String prompt) {
         printSeperator(30);
         System.out.println(prompt);
