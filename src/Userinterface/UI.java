@@ -42,7 +42,7 @@ public class UI {
                 userChoice = Integer.parseInt(scanner.next());
             }
             catch (Exception e) {
-                System.out.println("Wrong input, press 1-3");
+                System.out.println("Wrong input, press 1-4");
                 userChoice = 0;
             }
         } while (userChoice < 1 || userChoice > 4);
