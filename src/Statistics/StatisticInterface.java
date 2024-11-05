@@ -1,26 +1,31 @@
 package Statistics;
+import PizzaSystem.OrderAPizza;
+
 import java.time.LocalDateTime;
 import java.util.Scanner;
 
-public class StatisticInterface {
+//Class made to create a interface of the statistics and add orders to the statistics
+public class StatisticInterface extends OrderAPizza {
 
     static private StatisticsSystem statisticsSystem = new StatisticsSystem();
     static Scanner scanner = new Scanner(System.in);
     static LocalDateTime dateAndTime = LocalDateTime.now();
 
-    public static void addStatistic() {
-        System.out.println("Add pizza");
-        String name = scanner.next();
+    //Method made to take hashmap pizza order and add it to our statistics
+    public static void addOrderToStatistics() {
 
-        Statistic statistic = statisticsSystem.makeStatistics(name, dateAndTime);
-        System.out.println("Pizza tilføjet til statistikkerne. ID: " + statistic.getId());
+        Order statistic = statisticsSystem.makeStatistics(OrderAPizza.buyAPizza(), dateAndTime);
+        System.out.println("Pizza ordrer. ID: " + statistic.getId());
+
     }
 
+    //Method created to show all the statistics/orders
     public static void viewAllStatistics() {
         System.out.println("Here you can see all statistics");
-        for(Statistic stc : statisticsSystem.getStatistics()) {
+        for(Order stc : statisticsSystem.getStatistics()) {
             System.out.println(stc.getId() + " - " + stc.getPizzaName() + " - " + stc.getDateAndTime());
         }
     }
+
 
 }

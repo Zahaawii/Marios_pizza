@@ -1,20 +1,21 @@
 package PizzaSystem;
 import Userinterface.ConsoleOperators;
-import static PizzaSystem.BuildAPizza.scanner;
+import static PizzaSystem.OrderAPizza.scanner;
 import java.util.HashMap;
 import java.util.Map;
 
-
-
+//Class made to showcase all our pizzas, remove pizzas and add pizzas to the menu.
 public class PizzaMenu {
 
     static HashMap <Integer, String> pizzaer = new HashMap<>();
 
+    //Method made to take alle the private methods and only run here
     public static void showMenuUI() {
        userMenuDecision();
     }
 
-    private static HashMap menu() {
+    //Method created to have all the pizza available
+    protected static HashMap menu() {
 
         pizzaer.put(1, "Salat pizza: Salat, Tomatoes, Cucumbers, Onions, Kebab - 100,-");
         pizzaer.put(2, "Margaritha pizza: Cheese, tomatoes - 75,- ");
@@ -25,6 +26,7 @@ public class PizzaMenu {
         return pizzaer;
     }
 
+    //Method created to remove pizza from the menu
     private static void removePizzaFromMenu() {
         menu();
         System.out.println("Enter the number of the pizza you want to remove");
@@ -47,7 +49,8 @@ public class PizzaMenu {
 
     }
 
-    private static void seeAllPizza(){
+    //Method created to see all the pizzas on the menu
+    protected static void seeAllPizza(){
         menu();
 
         System.out.println("Menu:");
@@ -59,6 +62,7 @@ public class PizzaMenu {
         }
     }
 
+    //Method created to add new pizza to the menu and showcase it
     private static void addNewPizzaToMenu() {
         menu();
 
@@ -85,22 +89,26 @@ public class PizzaMenu {
 
     }
 
-//    private static void chooseToRemove() {
-//        System.out.println("Would you like to remove something from the menu? \nPress Y/N");
-//        String userChoice = scanner.next();
-//        if(userChoice.equalsIgnoreCase("Y")) {
-//            removePizzaFromMenu();
-//        }
-//    }
-//
-//    private static void addToMenu() {
-//        System.out.println("Would you like to add something to the menu \nPress Y/N");
-//        String userChoice = scanner.next();
-//        if(userChoice.equalsIgnoreCase("Y")) {
-//            addNewPizzaToMenu();
-//        }
-//    }
+    //Possible another solution than the one we provied - having it here just in case
+    /*
+    private static void chooseToRemove() {
+        System.out.println("Would you like to remove something from the menu? \nPress Y/N");
+        String userChoice = scanner.next();
+        if(userChoice.equalsIgnoreCase("Y")) {
+            removePizzaFromMenu();
+        }
+    }
 
+    private static void addToMenu() {
+        System.out.println("Would you like to add something to the menu \nPress Y/N");
+        String userChoice = scanner.next();
+        if(userChoice.equalsIgnoreCase("Y")) {
+            addNewPizzaToMenu();
+        }
+    }
+     */
+
+    //Method created to get all the different methods and give the user the decision to do somehting
     private static void userMenuDecision() {
         System.out.println("Do you want to see the menu, remove or add something to the menu?");
         ConsoleOperators.printSeperator(70);
